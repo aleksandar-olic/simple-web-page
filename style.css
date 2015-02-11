@@ -1,0 +1,45 @@
+
+html {display:block; margin: 0 auto; background-color: black;  color: white;}
+
+
+/* background-image: url('back.jpg'); background-size: 100% 100%; background-repeat: no-repeat; */
+
+html.whiteBody {display: block; margin: 0 auto; background-color: white; color:black;}
+html.whiteBody a{color:black;}
+html.whiteBody a:hover{color:gold;} 
+html.whiteBody h1 {border-top: 5px double LightBlue; border-bottom: 5px double LightBlue ;}
+html.whiteBody img#column {display: none;}
+
+
+header { padding: 1%;  font-family: 'Raleway', sans-serif; text-align: center; position:fixed; float:left; width: 12%;}
+	img#owl {width: 70%;} 
+	p#moto {text-align:justify; font-size: 60%;}
+	h1 {padding: 5% 0; border-top: 5px double gold; border-bottom: 5px double gold; font-size: 130%; }
+	nav {line-height: 150%; font-size: 90%;  }
+	dt { padding: 2% 0; }
+	dd {display: none; font-style: thin; margin: 0 auto;  line-height: 70%; font-size: 70%; width: 70%;} 
+	a {color: white; text-decoration:none;}
+	a:hover {color: gold;}
+	img#column {padding-top: 5em;  width: 70%;} 
+
+h2 {text-align: center;}
+hr {width: 100%;}
+
+section#content {padding-bottom: 1em; margin: auto; padding: 1%;   font-family: 'helvetica', sans-serif; font-size: 85%; text-align:justify; width: 55%;}
+section#ajax {padding-bottom: 1em; margin: auto; padding: 1%;   font-family: 'helvetica', sans-serif; font-size: 85%; text-align:justify; width: 55%;}
+img#greek {width: 100%;} 
+img#ariadne{width: 100%;} 
+img#leisure{margin: 2% auto 0 22.5%; display: block; width: 75%;} 
+img#oedipus{padding-top: 2em; width: 25%; display: block; margin: auto;} 
+img#rome{width:100%;} 
+article {padding: 2.5%; float: right; width: 18%; font-size: 80%; text-align:justify; margin-top: 5%; font-style: italic;}
+footer {clear: both; font-size:40%; text-align: center; margin-top: 10%;}
+
+
+img#pageimage {position: absolute; bottom: 0; right: 1%; z-index: -1; float: right; width: 15%; position: fixed;}
+
+
+button#exit, button#theme {position: absolute; bottom: 1%; right: 2%; z-index: 1; float: right; width: 10%; position: fixed; }
+button#fade  {position: absolute; bottom: 6%; right: 2%; z-index: 1; float: right; width: 10%; position: fixed; }
+button#top  {position: absolute; bottom: 11%; right: 2%; z-index: 1; float: right; width: 10%; position: fixed; }
+iframe#map {width: 100%; border: 5px double gray; border-radius: 6px;}

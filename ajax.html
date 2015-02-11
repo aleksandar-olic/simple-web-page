@@ -1,0 +1,117 @@
+
+<!doctype html>
+<html class="whiteBody">
+<!--  -->
+<head>
+<meta charset="utf-8">
+<title>A Study in Design</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<header>
+<img id="owl" src="img/owl.png">
+<h1>A Study in Design</h1>
+<nav>
+<dl>
+<dt><a href="home.html" title="Home">Home</a><br></dt>
+<dd>	Nam porta diam nunc, id egestas nulla tristique sed. </dd>
+<dt><a href="study.html" title="A Study">A Study </a><br></dt>
+<dd>	Curabitur eget orci sit sapien pellentesque tristique.</dd>
+<dt><a href="history.html" title="History">History</a><br></dt>
+<dd>	Nam porta diam nunc, id egestas nulla tristique sed.</dd>
+<dt><a href="emotion.html" title="Emotion">Emotion</a><br></dt>
+<dd>	Curabitur eget orci sit sapien pellentesque tristique.</dd>
+<dt><a href="leisure.html" title="Leisure">Leisure</a><br></dt>
+<dd>	Curabitur eget orci sit sapien pellentesque tristique.</dd>
+<dt><a href="contact.html" title="Contact">Contact</a><br></dt>
+<dd>	Nam porta diam nunc, id egestas nulla tristique sed.</dd>
+</dl>
+</nav>
+<img id="column" src="img/column.png">
+</header>
+
+<section id="ajax">
+<h2>AJAX &amp; Map</h2>
+
+<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11234.520797661973!2d19.832583738266624!3d45.255270223942276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1404476249523"></iframe>
+<hr>
+<button id="exit">Exit Ajax</button>
+<button id="fade">Fade Paragraph</button>
+<button id="top">Top</button>
+
+</section>
+
+<div class="wrap"></div>
+
+</body>
+
+<script>
+
+//AJAX
+
+(function() {
+	var wrap = $('div.wrap');
+
+	$('a').on('click', function( e ) {
+		var href = $(this).attr('href');
+
+		wrap.load( href + ' #content' );
+
+		e.preventDefault();
+	});	
+
+
+		$('button#exit').click(function(){
+		  window.location = 'home.html';
+		});
+
+
+})();
+
+
+	$('button#fade').click(function(){
+	$('p').each(function(i){
+		$(this).delay( 1000 * i++).fadeOut(1000);
+	}).promise().done(function(){console.log("all animations have fired");});
+	});
+
+ $('button#top').click(function(){
+   $('html, body').animate({scrollTop:0}, 'slow');
+ });
+
+
+$(document).ready(function(){
+
+
+	// hide #back-top first
+	$("#top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#top').fadeIn();
+			} else {
+				$('#top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+
+});
+
+
+</script>
+
+<script src="script.js"></script>
+</html>
+
